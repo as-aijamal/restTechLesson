@@ -6,33 +6,31 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+import java.util.List;
+
 @Entity
-@Table(name = "students")
+@Table(name = "groups")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Student {
+public class Group {
     @Id
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "student_gen"
+            generator = "group_gen"
     )
     @SequenceGenerator(
-            name = "student_gen",
-            sequenceName = "student_seq",
+            name = "group_gen",
+            sequenceName = "group_seq",
             allocationSize = 1
     )
     private Long id;
-    private String firstName;
-    private String lastName;
-    private int age;
-    private String email;
-    private boolean blocked;
-    @ManyToOne
-    private Group group;
-
-
+    private String groupName;
+    private String description;
+    private LocalDate starts;
+    private LocalDate finishes;
+    @OneToMany(mappedBy = "group")
+    private List<Student> students;
 }
-
-

@@ -3,11 +3,9 @@ package peaksoft.resttechlesson.api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import peaksoft.resttechlesson.dto.SimpleResponse;
-import peaksoft.resttechlesson.dto.StudentRequest;
-import peaksoft.resttechlesson.dto.StudentResponse;
-import peaksoft.resttechlesson.entity.Student;
+import peaksoft.resttechlesson.dto.student.StudentRequest;
+import peaksoft.resttechlesson.dto.student.StudentResponse;
 import peaksoft.resttechlesson.service.StudentService;
-import peaksoft.resttechlesson.service.impl.StudentServiceImpl;
 
 import java.util.List;
 

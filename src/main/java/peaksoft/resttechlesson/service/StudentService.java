@@ -1,9 +1,8 @@
 package peaksoft.resttechlesson.service;
 
 import peaksoft.resttechlesson.dto.SimpleResponse;
-import peaksoft.resttechlesson.dto.StudentRequest;
-import peaksoft.resttechlesson.dto.StudentResponse;
-import peaksoft.resttechlesson.entity.Student;
+import peaksoft.resttechlesson.dto.student.StudentRequest;
+import peaksoft.resttechlesson.dto.student.StudentResponse;
 
 import java.util.List;
 

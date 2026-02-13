@@ -1,17 +1,19 @@
-package peaksoft.resttechlesson.dto;
+package peaksoft.resttechlesson.dto.student;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-public class StudentRequest {
+@Data
+@Builder
+public class StudentResponse {
+    private Long id;
     private String firstName;
     private String lastName;
     private int age;
     private String email;
+    private boolean blocked;
 }
